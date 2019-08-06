@@ -1,0 +1,30 @@
+.float {
+    float: left;
+    
+}
+
+.GoLeft {
+    padding-left: 20px;
+    padding-top: 3px;
+
+
+}
+
+#ImgLook1, #ImgLook2, #ImgLook3, #ImgLook4 {
+    width: 96%;
+    height: 65%;
+}
+
+.name {
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Aldrich', sans-serif;
+    margin-bottom: 0px;
+
+}
+
+#RPG {
+    font-size: 54px;
+   font-family: 'Aldrich', sans-serif;
+
+}
