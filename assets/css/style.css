@@ -11,7 +11,8 @@ body {
 }
 
 #photoRow {
-    width: 15%;
+    width: 100%;
+    
     
     
     
@@ -19,23 +20,24 @@ body {
    
 }
 
+
 .firstRow {
     
-    border-style: solid;
+    display: inline-block;
     border-width: 3px;
-    border-color: white;
-    box-sizing: border-box;
+    
+    
     outline-style: solid;
     outline-color: rgb(0, 98, 255);
     outline-width: 3px;
     align-items: center;
     background-color: rgb(196, 215, 218);
-
+    
 }
 
 .GoLeft {
    
-    padding-top: 3px;
+    padding-top: 30px;
   
 
 
