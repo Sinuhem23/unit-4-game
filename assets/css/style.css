@@ -1,46 +1,70 @@
 
 body {
-    background-image: url("assets/images/BattleharborSTFighters.jpg");
+    background-image: url("../images/BattleharborSTFighters.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    
+    
+    
 
 
 }
 
 #photoRow {
+    width: 15%;
+    
+    
+    
 
-    margin-left: 22px;
+   
 }
 
 .firstRow {
+    
     border-style: solid;
     border-width: 3px;
     border-color: white;
     box-sizing: border-box;
     outline-style: solid;
-    outline-color: blue;
+    outline-color: rgb(0, 98, 255);
     outline-width: 3px;
     align-items: center;
-    background-color: white;
+    background-color: rgb(196, 215, 218);
 
 }
 
 .GoLeft {
-    padding-left: 20px;
+   
     padding-top: 3px;
+  
 
 
 }
 
+.col-12 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 20px;
+    color: black;
+  
+}
+
+
+
+
 #ImgLook1, #ImgLook2, #ImgLook3, #ImgLook4 {
-    width: 96px;
-    height: 65px;
+    width: 96%;
+    height: 65%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    
+    
+  
     
 }
 
 .name {
     text-align: center;
-    font-size: 12px;
+    font-size: 15px;
     font-family: 'Aldrich', sans-serif;
     margin-bottom: 0px;
 
@@ -51,3 +75,6 @@ body {
    font-family: 'Aldrich', sans-serif;
 
 }
+
+
+
