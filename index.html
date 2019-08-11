@@ -1,153 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
+
   <head>
-    <title>Street Fighter RPG</title>
-    <!-- linking the css file. -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-
-    <!-- linking the reset css file. -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
-
-    <!-- linking bootstrap. -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
-    />
-
-    <!-- linking Google Font. -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Aldrich&display=swap"
-      rel="stylesheet"
-    />
+    <meta charset="UTF-8">
+    <title>Street Fighter Challenge!</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+     <!-- Google Font. -->
+    <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <!-- Game Logic -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
   </head>
   <body>
-    <div class="container">
-      <!-- Row one: blank space and "Street Fighters RPG!" title. -->
-      <div class="row">
-        <div class="col-6">
-          <!-- this column is blank space before the "Street Fighters RPG!" title.-->
-        </div>
-
-        <div class="col-6" id="RPG">
-          <!-- "Street Fighter RPG!" title.-->
-          Street Fighter RPG!
-        </div>
+    
+    
+    <div id="main-game-section">
+      <div>
+        <h1 class="gameName">Street Fighter</h1>
+        
+        
+            </div>
+      <!-- Where the characters are initially available to be selected. -->
+      <div id="characters-section">
+        <div class="section-title">Select Your Character</div>
+        <div id="character-area"></div>
       </div>
-      <div class="container">
-        <!-- Row two: all photos start of game. -->
-        <div class="row" id="photoRow">
-          <div class="col-lg-3 firstRow _0" id="ryu" value="ryu">
-            <!--photo 1: Ryu-->
-            <p class="name">Ryu</p>
-            <img src="assets/images/ryu.png" id="ImgLook1" />
-            <p class="HP RyuHP Ryu 0"></p>
-          </div>
 
-          <div class="col-lg-3 firstRow _1" id="ken" value="ken">
-            <!--photo 2: Ken-->
-            <p class="name">Ken</p>
-            <img src="assets/images/ken.jpg" id="ImgLook2" />
-            <p class="HP KenHP Ken 1"></p>
-          </div>
+      <!-- Section for our selected character. -->
+      <div id="selected-character-section">
+        <div class="section-title">Your Character</div>
+        <!-- Where our selected character will appear. -->
+        <div id="selected-character"></div>
+      </div>
 
-          <div class="col-lg-3 firstRow _2" id="sagat" value="sagat">
-            <!--photo 3: Sagat-->
-            <p class="name">Sagat</p>
-            <img src="assets/images/sagat.jpg" id="ImgLook3" />
-            <p class="HP SagatHP Sagat 2"></p>
-          </div>
+      <!-- Where our enemies available to attack will appear. -->
+      <div id="available-to-attack-section">
+        <div class="section-title">Enemies Available To Attack</div>
+      </div>
 
-          <div class="col-lg-3 firstRow _3" id="MBison" value="MBison">
-            <!--photo 4: M.Bison-->
-            <p class="name">M.Bison</p>
-            <img src="assets/images/M.Bison.jpg" id="ImgLook4" />
-            <p class="HP MbisonHP M.Bison 3"></p>
-          </div>
+      <div class="section-title">Fight Section</div>
+      <div id="fight-section">
+        <button id="attack-button" style="display: none;">Attack</button>
+      </div>
+      <div id="action">
+        <div class="character-section">
+          <div class="section-title">Defender</div>
+          <!-- Where our defender will appear. -->
+          <div id="defender"></div>
         </div>
       </div>
 
-      <!-- Row three: "Your Character" text.-->
-      <div class="row GoLeft">
-        <div class="col-12">
-          Your Character
-        </div>
-      </div>
-
-      <!-- Row four: character player chooses.-->
-      <div class="row GoLeft">
-        <div class="col-12"></div>
-      </div>
-
-      <!-- Row five "Enemies available to attack" text.-->
-      <div class="row GoLeft">
-        <div class="col-12">
-          <p>Enemies Available to Attack</p>
-        </div>
-      </div>
-
-      <!-- Row six: enemys available to attack.-->
-      <div class="row GoLeft empty">
-        <div class="col-12" id="enemies0"></div>
-        <div class="col-12" id="enemies1"></div>
-        <div class="col-12" id="enemies2"></div>
-        <div class="col-12" id="enemies3"></div>
-      </div>
-
-      <!-- Row seven: "Fight Section"-->
-      <div class="row GoLeft">
-        <div class="col-12">
-          <p>Fight Section</p>
-        </div>
-      </div>
-
-      <!-- Row eight: "Attack" button.-->
-      <div class="row GoLeft">
-        <div class="col-12 attackButton">
-          <button>
-            Attack
-          </button>
-        </div>
-      </div>
-
-      <!-- Row nine: "Defender"-->
-      <div class="row GoLeft">
-        <div class="col-12">
-          <p>Defender</p>
-        </div>
-      </div>
-
-      <!-- Row ten: chosen players to attack.-->
-      <div class="row GoLeft">
-        <div class="col-12" id="defender"></div>
-      </div>
-
-      <!-- Row eleven: Text for when attacked.-->
-      <div class="row GoLeft">
-        <div class="col-12">
-          <br />
-          <p class="youAttacked"></p>
-          <p class="attackedBack"></p>
-          <p class="youDefeated"></p>
-          <p class="youWon"></p>
-          <p class="youLose"></p>
-          <p class="noEnemy"></p>
-        </div>
-      </div>
-
-      <!-- Row twelve: "restart" button. -->
-      <div class="row GoLeft">
-        <div class="col-12">
-          <button class="restart">
-            Restart
-          </button>
-        </div>
-      </div>
     </div>
+    <!-- Area for game messages. -->
+    <div id="game-message"></div>
+    <button id="reset-button" style="display: none;">Reset Game</button>
 
-    <!-- linking the jQuery.-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- linking the javascript file. -->
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+ 
+
+
+    
   </body>
+
 </html>
