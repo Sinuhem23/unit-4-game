@@ -63,6 +63,13 @@ body {
   
     
 }
+.HP {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Aldrich', sans-serif;
+    margin-bottom: 0px;
+
+}
 
 .name {
     text-align: center;

@@ -8,12 +8,6 @@
     <!-- linking the reset css file. -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
 
-    <!-- linking the jQuery.-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- linking the javascript file. -->
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-
     <!-- linking bootstrap. -->
     <link
       rel="stylesheet"
@@ -40,33 +34,37 @@
         </div>
       </div>
       <div class="container">
-      <!-- Row two: all photos start of game. -->
-      <div class="row" id="photoRow">
-        <div class="col-lg-3 firstRow _0" id="ryu">
-          <!--photo 1: Ryu-->
-          <p class="name">Ryu</p>
-          <img src="assets/images/ryu.png" id="ImgLook1" />
-        </div>
+        <!-- Row two: all photos start of game. -->
+        <div class="row" id="photoRow">
+          <div class="col-lg-3 firstRow _0" id="ryu" value="ryu">
+            <!--photo 1: Ryu-->
+            <p class="name">Ryu</p>
+            <img src="assets/images/ryu.png" id="ImgLook1" />
+            <p class="HP RyuHP Ryu 0"></p>
+          </div>
 
-        <div class="col-lg-3 firstRow _1" id="ken">
-          <!--photo 2: Ken-->
-          <p class="name">Ken</p>
-          <img src="assets/images/ken.jpg" id="ImgLook2" />
-        </div>
+          <div class="col-lg-3 firstRow _1" id="ken" value="ken">
+            <!--photo 2: Ken-->
+            <p class="name">Ken</p>
+            <img src="assets/images/ken.jpg" id="ImgLook2" />
+            <p class="HP KenHP Ken 1"></p>
+          </div>
 
-        <div class="col-lg-3 firstRow _2" id="sagat">
-          <!--photo 3: Sagat-->
-          <p class="name">Sagat</p>
-          <img src="assets/images/sagat.jpg" id="ImgLook3" />
-        </div>
+          <div class="col-lg-3 firstRow _2" id="sagat" value="sagat">
+            <!--photo 3: Sagat-->
+            <p class="name">Sagat</p>
+            <img src="assets/images/sagat.jpg" id="ImgLook3" />
+            <p class="HP SagatHP Sagat 2"></p>
+          </div>
 
-        <div class="col-lg-3 firstRow _3" id="MBison">
-          <!--photo 4: M.Bison-->
-          <p class="name">M.Bison</p>
-          <img src="assets/images/M.Bison.jpg" id="ImgLook4" />
+          <div class="col-lg-3 firstRow _3" id="MBison" value="MBison">
+            <!--photo 4: M.Bison-->
+            <p class="name">M.Bison</p>
+            <img src="assets/images/M.Bison.jpg" id="ImgLook4" />
+            <p class="HP MbisonHP M.Bison 3"></p>
+          </div>
         </div>
       </div>
-    </div>
 
       <!-- Row three: "Your Character" text.-->
       <div class="row GoLeft">
@@ -120,7 +118,7 @@
 
       <!-- Row ten: chosen players to attack.-->
       <div class="row GoLeft">
-        <div class="col-12"></div>
+        <div class="col-12" id="defender"></div>
       </div>
 
       <!-- Row eleven: Text for when attacked.-->
@@ -140,10 +138,16 @@
       <div class="row GoLeft">
         <div class="col-12">
           <button class="restart">
-             Restart
+            Restart
           </button>
         </div>
       </div>
     </div>
+
+    <!-- linking the jQuery.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- linking the javascript file. -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
   </body>
 </html>
